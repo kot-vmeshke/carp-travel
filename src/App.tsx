@@ -1,7 +1,22 @@
-import './App.css';
+import { HeroPage } from './components/HeroPage/HeroPage';
+import { createGlobalStyle } from 'styled-components';
 
-function App() {
-  return <h1>Hello, CarpTravel!</h1>;
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+`;
+
+const App: React.FC = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <HeroPage />
+    </>
+  );
 }
 
 export default App;

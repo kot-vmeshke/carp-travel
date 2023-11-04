@@ -1,10 +1,13 @@
 .hero {
   width: 100%;
   height: 100vh;
-  background: #333333;
+  background: #333333 url(/hero-bg.jpg) no-repeat center / cover;
 }
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  height: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
@@ -45,4 +48,118 @@
 }
 .hero-nav-item:hover::after {
   width: 100%;
+}
+
+.content {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 48px 0 132px;
+  align-items: center;
+}
+.content-right {
+  max-width: 300px;
+}
+.hero-title {
+  margin-bottom: 148px;
+  font-size: 98px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: -3.92px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.hero-title b {
+  font-size: 98px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -3.92px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.hero-subtitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 24px;
+  letter-spacing: 1.44px;
+  color: #fff;
+}
+.hero-date {
+  margin-top: 20px;
+  margin-bottom: 185px;
+}
+.hero-date img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-descr {
+  margin-bottom: 28px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: #fff;
+}
+.hero-button {
+  --boxW: 300px;
+  --boxH: 75px;
+  --borderW: 40px;
+  --borderH: 12px;
+  --borderSize: 1px;
+  --border-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 18px 64px;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: linear-gradient(
+      var(--border-color) var(--borderH),
+      transparent var(--borderH),
+      transparent calc(var(--boxH) - var(--borderH)),
+      var(--border-color) calc(var(--boxH) - var(--borderH))
+    ),
+    linear-gradient(
+      90deg,
+      var(--border-color) var(--borderW),
+      transparent var(--borderW),
+      transparent calc(var(--boxW) - var(--borderW)),
+      var(--border-color) calc(var(--boxW) - var(--borderW))
+    ),
+    linear-gradient(
+      var(--border-color) var(--borderH),
+      transparent var(--borderH),
+      transparent calc(var(--boxH) - var(--borderH)),
+      var(--border-color) calc(var(--boxH) - var(--borderH))
+    ),
+    linear-gradient(
+      90deg,
+      var(--border-color) var(--borderW),
+      transparent var(--borderW),
+      transparent calc(var(--boxW) - var(--borderW)),
+      var(--border-color) calc(var(--boxW) - var(--borderW))
+    );
+  background-size: var(--borderSize) var(--boxH), var(--boxW) var(--borderSize),
+    var(--borderSize) var(--boxH), var(--boxW) var(--borderSize);
+  background-position: 0 0, 0 0, 100% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  transition: background-color 0.3s;
+}
+.hero-button:hover {
+  --borderSize: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
 }

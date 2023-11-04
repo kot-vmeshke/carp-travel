@@ -65,3 +65,4 @@ const HeroPage = () => {
 };
 
 export { HeroPage };
+
